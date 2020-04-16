@@ -1,0 +1,395 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>Aubox</title>
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,300,700,400,900|Roboto:400|Open+Sans:600,800" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <script src="https://kit.fontawesome.com/44d66ba161.js" crossorigin="anonymous"></script>
+</head>
+<body class="body page-index clearfix">
+  <header class="clearfix">
+    <div class="logo"><div align="center" style="font-size:20px;color:#1f8efa;">
+<i class="fas fa-boxes"></i>
+</div></div>
+    <h1 class="title">Aubox</h1>
+    <h2 class="project">[CASDMAPI]</h2>
+    <div class="info"><div align="center" style="font-size:12px;">
+<i class="fas fa-info-circle"></i>
+</div></div>
+    <hgroup class="avatar"></hgroup>
+  </header>
+  <div class="main clearfix">
+    <div class="stages stages-1 clearfix">
+      <section class="header clearfix">
+        <div class="icon icon-1"><div align="center" style="font-size:14px;color: #9d0fef;">
+<i class="fas fa-tasks"></i>
+</div></div>
+        <h3 class="title">JOB STAGES</h3>
+      </section>
+      <ul class="stages clearfix">
+        <li class="pre-execution clearfix">
+          <div class="icon"><div align="center" style="font-size:16px;color:#1f8efa;">
+<i class="fas fa-puzzle-piece"></i>
+</div></div>
+          <h4 class="title">PRE EXECUTION</h4>
+          <ul class="preitems clearfix js-preexec">
+            <li class="item clearfix">
+              <a href="#addPrexecutionStep" class="add">+ add</a>
+            </li>
+          </ul>
+        </li>
+        <li class="execution clearfix">
+          <div class="icon"><div align="center" style="font-size:16px;color:#9d0fef;">
+<i class="fas fa-cogs"></i>
+</div></div>
+          <h4 class="title">EXECUTION</h4>
+          <ul class="items clearfix js-exec">
+            <li class="item clearfix">
+              <p class="add">+ add</p>
+            </li>
+          </ul>
+        </li>
+        <li class="post-execution clearfix">
+          <div class="icon"><div align="center" style="font-size:16px;color:#c9a305;">
+<i class="fas fa-bolt"></i>
+</div></div>
+          <h4 class="title">POST EXECUTION</h4>
+          <ul class="items clearfix js-postexec">
+            <li class="item clearfix">
+              <p class="add">+ add</p>
+            </li>
+          </ul>
+        </li>
+        <li class="end clearfix">
+          <div class="icon"><div align="center" style="font-size:16px;color:#2f3b52;">
+<i class="fas fa-dot-circle"></i>
+</div></div>
+          <h4 class="title">END</h4>
+        </li>
+      </ul>
+    </div>
+    <div class="editor editor-1 clearfix">
+      <div class="topmav clearfix">
+        <div class="icon"><div align="center" style="font-size:16px;color: #FFFE1E;">
+<i class="fab fa-edit"></i>
+</div></div>
+        <div class="titlenav clearfix">
+          <p class="editor">EDITOR</p>
+        </div>
+        <p class="subtitle">PRE-EXECUTION</p>
+        <button>Name</button>
+      </div>
+      <section class="preexepanel clearfix">
+        <div class="description clearfix">
+          <div class="header clearfix">
+            <div class="icon js-toggle-desc"><div align="center" style="font-size:10px;color:#657d95;">
+<i class="fas fa-quote-left"></i>
+</div></div>
+            <p class="title">Description</p>
+            <div class="fa-button-normal fa-button-over clean"><div align="center" style="font-size:10px;">
+<i class="fas fa-broom"></i>
+</div></div>
+          </div>
+          <div class="desc clearfix js-panel-desc">
+            <textarea class="js-description" name="description" placeholder="Operation description here ..."></textarea>
+          </div>
+        </div>
+        <div class="conditions clearfix">
+          <div class="header clearfix">
+            <div class="icon js-toggle-conds"><div align="center" style="font-size:10px;">
+<i class="fas fa-stream"></i>
+</div></div>
+            <p class="title">Conditions&nbsp;</p>
+            <p class="total">2</p>
+            <div class="fa-button-normal fa-button-over add"><div align="center" style="font-size:10px;">
+<i class="fas fa-plus"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over clean"><div align="center" style="font-size:10px;">
+<i class="fas fa-broom"></i>
+</div></div>
+          </div>
+          <ul class="condlst clearfix js-panel-conds">
+            <li class="condition clearfix">
+              <p class="if">IF</p>
+              <select class="_select-1 js-ifitem" name="cond_ifitem">
+                <option value="Previous Step">Previous Step</option>
+                <option value="Parameter">Parameter</option>
+                <option value="Enviroment Variable">Enviroment Variable</option>
+                <option value="Aubox Variable">Aubox Variable</option>
+                <option value="Previous Job Execution">Previous Job Execution</option>
+              </select>
+              <input class="js-ifvar" name="cond_ifvar" type="text">
+              <select class="_select-2 js-cond_ifop" name="cond_ifop">
+                <option value="=">=</option>
+                <option value="!=">!=</option>
+                <option value=">">></option>
+                <option value="<"><</option>
+                <option value="contains">contains</option>
+                <option value="like">like</option>
+              </select>
+              <select class="_select-3 js-cond_ifref" name="cond_ifref">
+                <option value="Succeeded">Succeeded</option>
+                <option value="Failed">Failed</option>
+                <option value="Any">Any</option>
+              </select>
+              <div class="fa-button-normal fa-button-over remove js-remove-cond"><div align="center" style="font-size:10px;">
+<i class="fas fa-trash-alt"></i>
+</div></div>
+            </li>
+          </ul>
+        </div>
+        <div class="code code-1">
+          <div class="header clearfix">
+            <div class="icon js-toggle-code"><div align="center" style="font-size:10px;color:#c9a305;">
+<i class="fas fa-crown"></i>
+</div></div>
+            <p class="title">Kind</p>
+            <select>
+              <option value="Command line">Command line</option>
+              <option value="Web service (SOAP)">Web service (SOAP)</option>
+              <option value="REST API">REST API</option>
+            </select>
+            <div class="fa-button-normal fa-button-over lang"><div align="center" style="font-size:10px;">
+<i class="fas fa-code"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over clean"><div align="center" style="font-size:10px;">
+<i class="fas fa-broom"></i>
+</div></div>
+          </div>
+          <ul class="code clearfix js-code">
+            <textarea placeholder="Command line here ..."></textarea>
+            <div class="fa-button-normal fa-button-over parms"><div align="center" style="font-size:10px;color: #05c985;">
+<i class="fab fa-codepen"></i>
+</div></div>
+          </ul>
+        </div>
+        <div class="exitcodes clearfix">
+          <div class="header clearfix">
+            <div class="icon js-toggle-exit"><div align="center" style="font-size:10px;color:#90FF1E;">
+<i class="fas fa-sort-numeric-down"></i>
+</div></div>
+            <p class="title">Exit Code Handling&nbsp;</p>
+            <p class="total">2</p>
+            <div class="fa-button-normal fa-button-over add"><div align="center" style="font-size:10px;">
+<i class="fas fa-plus"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over clear"><div align="center" style="font-size:10px;">
+<i class="fas fa-broom"></i>
+</div></div>
+          </div>
+          <ul class="items clearfix js-exit-panel">
+            <li class="item clearfix">
+              <p class="if">If the exit code</p>
+              <select class="_select-5">
+                <option value="=">=</option>
+                <option value="!=">!=</option>
+                <option value=">">></option>
+                <option value="<"><</option>
+                <option value="contains">contains</option>
+                <option value="like">like</option>
+              </select>
+              <input type="text">
+              <select class="_select-6">
+                <option value="Fail the Job">Fail the Job</option>
+                <option value="Next execution step">Next execution step</option>
+              </select>
+              <div class="fa-button-normal fa-button-over remove js-remove-cond"><div align="center" style="font-size:10px;">
+<i class="fas fa-trash-alt"></i>
+</div></div>
+            </li>
+          </ul>
+        </div>
+        <div class="handling clearfix">
+          <div class="header clearfix">
+            <div class="wrapper wrapper-1 js-toggle-output"><div align="center" style="font-size:10px;color:#90FF1E;">
+<i class="fas fa-sort-numeric-down"></i>
+</div></div>
+            <p class="cond">Output Handling&nbsp;</p>
+            <div class="fa-button-normal fa-button-over wrapper wrapper-2"><div align="center" style="font-size:10px;">
+<i class="fas fa-plus"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over wrapper wrapper-3"><div align="center" style="font-size:10px;">
+<i class="fas fa-broom"></i>
+</div></div>
+          </div>
+          <div class="output js-output-panel"></div>
+        </div>
+        <div class="append clearfix">
+          <div class="header clearfix">
+            <div class="wrapper wrapper-4 js-toggle-append"><div align="center" style="font-size:10px;color:#c9a305;">
+<i class="far fa-file-alt"></i>
+</div></div>
+            <p class="cond">Append Options&nbsp;</p>
+            <div class="fa-button-normal fa-button-over wrapper wrapper-5"><div align="center" style="font-size:10px;">
+<i class="fas fa-plus"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over wrapper wrapper-6"><div align="center" style="font-size:10px;">
+<i class="fas fa-broom"></i>
+</div></div>
+          </div>
+          <ul class="ecodeh-lst clearfix js-append-panel">
+            <label class="checkbox-label checkbox-label-1 clearfix">
+              <input class="checkbox" type="checkbox">
+              <span class="point-text">Append command to Job output</span>
+            </label>
+            <label class="checkbox-label checkbox-label-2 clearfix">
+              <input class="checkbox" type="checkbox">
+              <span class="point-text">Append command standard output to Job output</span>
+            </label>
+            <li class="item item-5 clearfix">
+              <p class="if">Use filter</p>
+              <select>
+                <option value="Output line start with">Output line start with</option>
+                <option value="Output line contain">Output line contain</option>
+                <option value="Output line ends with">Output line ends with</option>
+                <option value="Output line matches regex">Output line matches regex</option>
+                <option value="Output does not contain">Output does not contain</option>
+              </select>
+              <input type="text">
+              <div class="fa-button-normal fa-button-over remove js-remove-cond"><div align="center" style="font-size:10px;">
+<i class="fas fa-trash-alt"></i>
+</div></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="entities entities-1 clearfix">
+      <div class="header header-8 clearfix">
+        <div class="icon icon-11"><div align="center" style="font-size:16px;color: #05c985;">
+<i class="fab fa-codepen"></i>
+</div></div>
+        <h3 class="title">ENTITY / INTERFACE</h3>
+      </div>
+      <section class="linkages linkages-1">
+        <div class="header clearfix">
+          <div class="icon js-toggle-lnk"><div align="center" style="font-size:10px;color: Dodgerblue;">
+<i class="fas fa-link"></i>
+</div></div>
+          <h3 class="title">Linkages</h3>
+          <p class="counter">2</p>
+        </div>
+        <div class="lnkpanel clearfix js-lnk-panel">
+          <article class="desc">Generates those parameters that you will use to connect to servers, databases, login or connections to the target.</article>
+          <div class="entities clearfix">
+            <h4 class="entity">ENTITY</h4>
+            <h4 class="view">VIEW</h4>
+            <div class="fa-button-normal fa-button-over add"><div align="center" style="font-size:10px;">
+<i class="fas fa-plus"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over edit"><div align="center" style="font-size:10px;">
+<i class="fas fa-edit"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over up"><div align="center" style="font-size:10px;">
+<i class="fas fa-sort-up"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over down"><div align="center" style="font-size:10px;">
+<i class="fas fa-sort-down"></i>
+</div></div>
+            <div class="separator"></div>
+            <ul class="linkages">
+              <li onClick="window.location='#selectLinkageItem';" id="1" class="linkage clearfix">
+                <p class="name">Name</p>
+                <p class="caption">Caption</p>
+                <div class="preview"></div>
+                <div class="fa-button-normal fa-button-over remove js-remove-linkage"><div align="center" style="font-size:10px;">
+<i class="fas fa-trash-alt"></i>
+</div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="properties clearfix">
+        <div class="header clearfix">
+          <div class="icon js-toggle-job"><div align="center" style="font-size:10px;color: #05c985;">
+<i class="fas fa-cube"></i>
+</div></div>
+          <p class="title">Job Properties</p>
+          <p class="counter">2</p>
+        </div>
+        <div class="proppanel clearfix js-job-panel">
+          <p class="desc">Add the Job design parameters. These will be used as input parameters in the job run</p>
+          <div class="entities clearfix">
+            <h4 class="entity">ENTITY</h4>
+            <h4 class="view">VIEW</h4>
+            <div class="fa-button-normal fa-button-over add"><div align="center" style="font-size:10px;">
+<i class="fas fa-plus"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over edit"><div align="center" style="font-size:10px;">
+<i class="fas fa-edit"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over up"><div align="center" style="font-size:10px;">
+<i class="fas fa-sort-up"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over down"><div align="center" style="font-size:10px;">
+<i class="fas fa-sort-down"></i>
+</div></div>
+            <div class="separator"></div>
+            <ul class="linkages">
+              <li onClick="window.location='#selectLinkageItem';" id="1" class="linkage clearfix">
+                <p class="name">Name</p>
+                <p class="caption">Caption</p>
+                <div class="preview"></div>
+                <div class="fa-button-normal fa-button-over remove js-remove-linkage"><div align="center" style="font-size:10px;">
+<i class="fas fa-trash-alt"></i>
+</div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="runtime clearfix">
+        <div class="header clearfix">
+          <div class="icon js-toggle-runtime"><div align="center" style="font-size:10px;color: #FF901E;">
+<i class="fas fa-bolt"></i>
+</div></div>
+          <p class="title">Runtime Parameters</p>
+          <p class="counter">2</p>
+        </div>
+        <div class="rtimepanel clearfix js-runtime-panel">
+          <article class="desc">Includes run-time parameters that will be captured as properties to be displayed in the job monitoring</article>
+          <div class="entities clearfix">
+            <h4 class="entity">ENTITY</h4>
+            <h4 class="view">VIEW</h4>
+            <div class="fa-button-normal fa-button-over add"><div align="center" style="font-size:10px;">
+<i class="fas fa-plus"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over edit"><div align="center" style="font-size:10px;">
+<i class="fas fa-edit"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over up"><div align="center" style="font-size:10px;">
+<i class="fas fa-sort-up"></i>
+</div></div>
+            <div class="fa-button-normal fa-button-over down"><div align="center" style="font-size:10px;">
+<i class="fas fa-sort-down"></i>
+</div></div>
+            <div class="separator"></div>
+            <ul class="linkages">
+              <li onClick="window.location='#selectLinkageItem';" id="1" class="linkage clearfix">
+                <p class="name">Name</p>
+                <p class="caption">Caption</p>
+                <div class="preview"></div>
+                <div class="fa-button-normal fa-button-over remove js-remove-linkage"><div align="center" style="font-size:10px;">
+<i class="fas fa-trash-alt"></i>
+</div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <footer></footer>
+  <div class="add add-9"><div align="center" style="font-size:10px; color:#c905a7;">
+<i class="fas fa-magic"></i>
+</div></div>
+
+  <script src="js/jquery-min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
